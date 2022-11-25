@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    <div style="display: flex;justify-content: center;align-items: center;gap: 20px;">
+        <button style="height: 50px; width: 50px;font-size: 30px;" onclick="decrement()">-</button>
+    <div class="b" style="display: flex;justify-content: center;align-items: center;height: 50px; width: 150px;font-size: 30px;border: 1px solid black;">0</div>
+    <button style="height: 50px; width: 50px; font-size: 30px;" onclick="increment()">+</button>
+    </div>
+</body>
+<script>
+    const NumberNode = document.getElementsByClassName("b")[0];
+    let number = parseInt(NumberNode.innerText);
+
+    function decrement(){
+        number -=1;
+        NumberNode.innerText = number;
+    }
+
+    function increment(){
+        number +=1;
+        NumberNode.innerText = number;
+    }
+</script>
+</html>
